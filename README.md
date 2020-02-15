@@ -8,7 +8,7 @@
 [![StyleCI](https://styleci.io/repos/240738815/shield)](https://styleci.io/repos/240738815)
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-eloquent-uuid.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/laravel-eloquent-uuid)
 
-TL;DR
+A simple drop-in solution for UUID support in your Eloquent models.
 
 ## Installation
 

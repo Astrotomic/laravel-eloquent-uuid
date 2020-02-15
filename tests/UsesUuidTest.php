@@ -130,4 +130,13 @@ final class UsesUuidTest extends TestCase
 
         PostUuidAttribute::byUuid(1.5)->firstOrFail();
     }
+
+    /** @test */
+    public function it_throws_exception_when_invalid_uuid_set()
+    {
+        static::expectException(InvalidArgumentException::class);
+
+        $post = new PostUuidAttribute();
+        $post->setUuid('foobar');
+    }
 }
