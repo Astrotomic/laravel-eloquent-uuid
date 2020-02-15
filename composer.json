@@ -31,16 +31,6 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Astrotomic\\LaravelEloquentUuid\\LaravelEloquentUuidServiceProvider"
-            ],
-            "aliases": {
-                "LaravelEloquentUuid": "Astrotomic\\LaravelEloquentUuid\\LaravelEloquentUuidFacade"
-            }
-        }
-    },
     "autoload": {
         "psr-4": {
             "Astrotomic\\LaravelEloquentUuid\\": "src"
