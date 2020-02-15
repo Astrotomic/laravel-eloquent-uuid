@@ -4,8 +4,8 @@ namespace Astrotomic\LaravelEloquentUuid\Eloquent\Concerns;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
 use InvalidArgumentException;
+use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
 /**
@@ -19,7 +19,7 @@ trait UsesUUID
     {
         self::creating(static function (Model $model): void {
             /** @var Model|UsesUUID $model */
-            if (Str::isUuid($model->getUuid())) {
+            if (Uuid::isValid($model->getUuid())) {
                 return;
             }
 
@@ -41,7 +41,7 @@ trait UsesUUID
 
     public static function generateUuid(): UuidInterface
     {
-        return Str::uuid();
+        return Uuid::uuid4();
     }
 
     /**
