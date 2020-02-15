@@ -81,7 +81,7 @@ use Illuminate\Database\Schema\Blueprint;
 
 Schema::create('posts', function (Blueprint $table) {
     // ...
-    $table->uuid('uuid');
+    $table->uuid('uuid')->unique();
     // ...
 });
 ```
