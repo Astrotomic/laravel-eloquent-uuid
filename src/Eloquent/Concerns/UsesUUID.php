@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Concerns;
+namespace Astrotomic\LaravelEloquentUuid\Eloquent\Concerns;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -46,18 +46,16 @@ trait UsesUUID
 
     /**
      * @param Builder $query
-     * @param string|string[]|null $uuid
+     * @param string|string[]|UuidInterface|UuidInterface[] $uuid
      *
      * @return Builder
      */
     public function scopeByUuid(Builder $query, $uuid): Builder
     {
-        if (is_string($uuid)) {
-            return $query->where($this->getUuidName(), '=', $uuid);
+        if (is_string($uuid) || $uuid instanceof UuidInterface) {
+            return $query->where($this->getQualifiedUuidName(), '=', strval($uuid));
         } elseif (is_array($uuid)) {
-            return $query->whereIn($this->getUuidName(), $uuid);
-        } elseif ($uuid === null) {
-            return $query->whereNull($this->getUuidName());
+            return $query->whereIn($this->getQualifiedUuidName(), array_map('strval', $uuid));
         }
 
         throw new InvalidArgumentException('The UUID has to be of type string, array or null.');
