@@ -23,10 +23,7 @@ trait UsesUUID
                 return;
             }
 
-            $model->setAttribute(
-                $model->getUuidName(),
-                static::generateUniqueUuid()
-            );
+            $model->setUuid(static::generateUniqueUuid());
         });
     }
 
@@ -59,6 +56,16 @@ trait UsesUUID
         }
 
         throw new InvalidArgumentException('The UUID has to be of type string, array or null.');
+    }
+
+    /**
+     * @param string|UuidInterface $uuid
+     *
+     * @return Model
+     */
+    public function setUuid($uuid): Model
+    {
+        return $this->setAttribute($this->getUuidName(), strval($uuid));
     }
 
     public function getUuid(): ?string

@@ -47,9 +47,8 @@ final class UsesUuidTest extends TestCase
     {
         $uuid = Str::uuid()->toString();
 
-        $post = PostUuidAttribute::create([
-            'uuid' => $uuid,
-        ]);
+        $post = new PostUuidAttribute();
+        $post->setUuid($uuid)->save();
 
         static::assertIsString($post->getUuid());
         static::assertTrue(Uuid::isValid($post->uuid));

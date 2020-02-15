@@ -10,7 +10,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', static function (Blueprint $table): void {
             $table->bigIncrements('id');
-            $table->uuid('uuid');
+            $table->uuid('uuid')->unique();
             $table->timestamps();
         });
     }
