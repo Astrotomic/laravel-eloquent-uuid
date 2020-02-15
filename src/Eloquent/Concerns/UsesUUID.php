@@ -54,9 +54,9 @@ trait UsesUUID
     {
         if (is_string($uuid)) {
             return $query->where($this->getUuidName(), '=', $uuid);
-        } elseif(is_array($uuid)) {
+        } elseif (is_array($uuid)) {
             return $query->whereIn($this->getUuidName(), $uuid);
-        } elseif($uuid === null) {
+        } elseif ($uuid === null) {
             return $query->whereNull($this->getUuidName());
         }
 
