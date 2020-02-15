@@ -8,6 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Orchestra\Testbench\TestCase;
+use Ramsey\Uuid\Uuid;
 
 final class UsesUuidTest extends TestCase
 {
@@ -26,7 +27,7 @@ final class UsesUuidTest extends TestCase
         $post = PostUuidAttribute::create([]);
 
         static::assertIsString($post->getUuid());
-        static::assertTrue(Str::isUuid($post->uuid));
+        static::assertTrue(Uuid::isValid($post->uuid));
     }
 
     /** @test */
@@ -37,7 +38,7 @@ final class UsesUuidTest extends TestCase
         ]);
 
         static::assertIsString($post->getUuid());
-        static::assertTrue(Str::isUuid($post->uuid));
+        static::assertTrue(Uuid::isValid($post->uuid));
         static::assertNotEquals('foobar', $post->uuid);
     }
 
@@ -51,7 +52,7 @@ final class UsesUuidTest extends TestCase
         ]);
 
         static::assertIsString($post->getUuid());
-        static::assertTrue(Str::isUuid($post->uuid));
+        static::assertTrue(Uuid::isValid($post->uuid));
         static::assertSame($uuid, $post->uuid);
     }
 
@@ -68,7 +69,7 @@ final class UsesUuidTest extends TestCase
 
         static::assertIsString($post->getUuid());
         static::assertIsString($post->getKey());
-        static::assertTrue(Str::isUuid($post->getKey()));
+        static::assertTrue(Uuid::isValid($post->getKey()));
         static::assertSame($uuid, $post->getKey());
         static::assertSame($post->getUuid(), $post->getKey());
     }
@@ -85,7 +86,7 @@ final class UsesUuidTest extends TestCase
         $post = PostUuidAttribute::byUuid($uuid)->firstOrFail();
 
         static::assertIsString($post->getUuid());
-        static::assertTrue(Str::isUuid($post->uuid));
+        static::assertTrue(Uuid::isValid($post->uuid));
         static::assertSame($uuid, $post->uuid);
     }
 
@@ -101,7 +102,7 @@ final class UsesUuidTest extends TestCase
         $post = PostUuidAttribute::byUuid($uuid)->firstOrFail();
 
         static::assertIsString($post->getUuid());
-        static::assertTrue(Str::isUuid($post->uuid));
+        static::assertTrue(Uuid::isValid($post->uuid));
         static::assertSame($uuid->toString(), $post->uuid);
     }
 
@@ -117,7 +118,7 @@ final class UsesUuidTest extends TestCase
         $post = PostUuidAttribute::byUuid([$uuid, Str::uuid()])->firstOrFail();
 
         static::assertIsString($post->getUuid());
-        static::assertTrue(Str::isUuid($post->uuid));
+        static::assertTrue(Uuid::isValid($post->uuid));
         static::assertSame($uuid, $post->uuid);
     }
 
