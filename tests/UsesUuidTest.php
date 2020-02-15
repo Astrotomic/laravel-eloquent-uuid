@@ -4,7 +4,6 @@ namespace Astrotomic\LaravelEloquentUuid\Tests;
 
 use Astrotomic\LaravelEloquentUuid\Tests\Models\PostUuidAttribute;
 use Astrotomic\LaravelEloquentUuid\Tests\Models\PostUuidKey;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
@@ -18,7 +17,7 @@ final class UsesUuidTest extends TestCase
     {
         parent::setUp();
 
-        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
     }
 
     /** @test */

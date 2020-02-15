@@ -2,9 +2,6 @@
 
 namespace Astrotomic\LaravelEloquentUuid\Tests\Models;
 
-use Astrotomic\LaravelEloquentUuid\Eloquent\Concerns\UsesUUID;
-use Illuminate\Database\Eloquent\Model;
-
 class PostUuidKey extends PostUuidAttribute
 {
     public $incrementing = false;
