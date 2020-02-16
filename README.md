@@ -73,7 +73,7 @@ class Post extends Model
 
 ### Migration
 
-Laravel provides an `uuid()` column type on the table `Blueeprint` class.
+Laravel provides an `uuid()` column type on the table `Blueprint` class.
 
 ```php
 use Illuminate\Support\Facades\Schema;
