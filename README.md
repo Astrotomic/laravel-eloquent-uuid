@@ -109,6 +109,11 @@ If you discover any security related issues, please email dev.gummibeer@gmail.co
 - [Tom Witkowski](https://github.com/Gummibeer)
 - [All Contributors](../../contributors)
 
+## Alternatives
+
+* [jamesmills/eloquent-uuid](https://github.com/jamesmills/eloquent-uuid)
+* [goldspecdigital/laravel-eloquent-uuid](https://github.com/goldspecdigital/laravel-eloquent-uuid)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
