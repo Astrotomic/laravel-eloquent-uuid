@@ -66,7 +66,7 @@ trait UsesUUID
     public function setUuid($uuid): Model
     {
         if (! Uuid::isValid($uuid)) {
-            throw new InvalidArgumentException('The UUID has to be of type string, array or null.');
+            throw new InvalidArgumentException('The UUID has to be a valid UUID.');
         }
 
         return $this->setAttribute($this->getUuidName(), strval($uuid));
