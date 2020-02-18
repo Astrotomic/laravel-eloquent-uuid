@@ -111,6 +111,7 @@ If you discover any security related issues, please email dev.gummibeer@gmail.co
 
 ## Alternatives
 
+* [dyrynda/laravel-model-uuid](https://github.com/michaeldyrynda/laravel-model-uuid)
 * [jamesmills/eloquent-uuid](https://github.com/jamesmills/eloquent-uuid)
 * [goldspecdigital/laravel-eloquent-uuid](https://github.com/goldspecdigital/laravel-eloquent-uuid)
 
