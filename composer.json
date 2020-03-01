@@ -9,16 +9,16 @@
         "eloquent",
         "uuid"
     ],
-  "homepage": "https://astrotomic.info",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Tom Witkowski",
-      "email": "gummibeer@astrotomic.info",
-      "homepage": "https://gummibeer.de",
-      "role": "Developer"
-    }
-  ],
+    "homepage": "https://astrotomic.info",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "gummibeer@astrotomic.info",
+            "homepage": "https://gummibeer.de",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.2",
         "illuminate/database": "^6.0",
@@ -45,9 +45,9 @@
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
-  "support": {
-    "email": "dev@astrotomic.info",
-    "issues": "https://github.com/Astrotomic/laravel-eloquent-uuid/issues",
-    "source": "https://github.com/Astrotomic/laravel-eloquent-uuid"
-  }
+    "support": {
+        "email": "dev@astrotomic.info",
+        "issues": "https://github.com/Astrotomic/laravel-eloquent-uuid/issues",
+        "source": "https://github.com/Astrotomic/laravel-eloquent-uuid"
+    }
 }
