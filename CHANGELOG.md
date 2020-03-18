@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-eloquent-uuid` will be documented in this file
 
+## 1.1.0 - 2020-03-18
+
+- Add Laravel 7 support
+
 ## 1.0.1 - 2020-02-15
 
 - Fix auto-discover
