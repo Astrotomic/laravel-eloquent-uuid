@@ -1,5 +1,3 @@
-
-
 # Laravel Eloquent UUID
 
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-eloquent-uuid.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-eloquent-uuid)
