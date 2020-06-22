@@ -64,7 +64,7 @@ class Post extends Model
 
     protected $keyType = 'string';
 
-    public function getUuidName(): string 
+    public function getUuidName(): string
     {
         return $this->getKeyName();
     }
@@ -88,7 +88,7 @@ Schema::create('posts', function (Blueprint $table) {
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -111,9 +111,9 @@ If you discover any security related issues, please check [SECURITY](https://git
 
 ## Alternatives
 
-* [dyrynda/laravel-model-uuid](https://github.com/michaeldyrynda/laravel-model-uuid)
-* [jamesmills/eloquent-uuid](https://github.com/jamesmills/eloquent-uuid)
-* [goldspecdigital/laravel-eloquent-uuid](https://github.com/goldspecdigital/laravel-eloquent-uuid)
+- [dyrynda/laravel-model-uuid](https://github.com/michaeldyrynda/laravel-model-uuid)
+- [jamesmills/eloquent-uuid](https://github.com/jamesmills/eloquent-uuid)
+- [goldspecdigital/laravel-eloquent-uuid](https://github.com/goldspecdigital/laravel-eloquent-uuid)
 
 ## License
 
