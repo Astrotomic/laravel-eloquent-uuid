@@ -9,6 +9,7 @@ use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
 /**
+ * @method static Builder whereUuid(string|string[] $uuid)
  * @method static Builder byUuid(string|string[] $uuid)
  *
  * @mixin Model
@@ -19,7 +20,7 @@ trait UsesUUID
     {
         self::creating(static function (Model $model): void {
             /** @var Model|UsesUUID $model */
-            if (Uuid::isValid($model->getUuid())) {
+            if ($model->isValidUuid($model->getUuid())) {
                 return;
             }
 
@@ -47,7 +48,7 @@ trait UsesUUID
      *
      * @return Builder
      */
-    public function scopeByUuid(Builder $query, $uuid): Builder
+    public function scopeWhereUuid(Builder $query, $uuid): Builder
     {
         if (is_string($uuid) || $uuid instanceof UuidInterface) {
             return $query->where($this->getQualifiedUuidName(), '=', strval($uuid));
@@ -59,13 +60,24 @@ trait UsesUUID
     }
 
     /**
+     * @param Builder $query
+     * @param string|string[]|UuidInterface|UuidInterface[] $uuid
+     *
+     * @return Builder
+     */
+    public function scopeByUuid(Builder $query, $uuid): Builder
+    {
+        return $this->scopeWhereUuid($query, $uuid);
+    }
+
+    /**
      * @param string|UuidInterface $uuid
      *
      * @return Model
      */
     public function setUuid($uuid): Model
     {
-        if (! Uuid::isValid($uuid)) {
+        if (! $this->isValidUuid($uuid)) {
             throw new InvalidArgumentException('The UUID has to be a valid UUID.');
         }
 
@@ -75,6 +87,20 @@ trait UsesUUID
     public function getUuid(): ?string
     {
         return $this->getAttribute($this->getUuidName());
+    }
+
+    /**
+     * @param string|UuidInterface $uuid
+     *
+     * @return bool
+     */
+    public function isValidUuid($uuid): bool
+    {
+        if (is_string($uuid) || $uuid instanceof UuidInterface) {
+            return Uuid::isValid(strval($uuid));
+        }
+
+        return false;
     }
 
     public function getQualifiedUuidName(): string
