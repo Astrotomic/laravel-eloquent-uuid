@@ -106,14 +106,14 @@ If you discover any security related issues, please check [SECURITY](https://git
 
 ## Credits
 
-- [Tom Witkowski](https://github.com/Gummibeer)
-- [All Contributors](../../contributors)
+-   [Tom Witkowski](https://github.com/Gummibeer)
+-   [All Contributors](../../contributors)
 
 ## Alternatives
 
-- [dyrynda/laravel-model-uuid](https://github.com/michaeldyrynda/laravel-model-uuid)
-- [jamesmills/eloquent-uuid](https://github.com/jamesmills/eloquent-uuid)
-- [goldspecdigital/laravel-eloquent-uuid](https://github.com/goldspecdigital/laravel-eloquent-uuid)
+-   [dyrynda/laravel-model-uuid](https://github.com/michaeldyrynda/laravel-model-uuid)
+-   [jamesmills/eloquent-uuid](https://github.com/jamesmills/eloquent-uuid)
+-   [goldspecdigital/laravel-eloquent-uuid](https://github.com/goldspecdigital/laravel-eloquent-uuid)
 
 ## License
 
