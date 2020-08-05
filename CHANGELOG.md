@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-eloquent-uuid` will be documented in this file
 
+## 1.2.0 - 2020-08-05
+
+- Add `whereUuid()` scope
+
 ## 1.1.0 - 2020-03-18
 
 - Add Laravel 7 support
