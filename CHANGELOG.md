@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-eloquent-uuid` will be documented in this file
 
+## 1.4.0 - 2021-02-21
+
+- Add PHP 8.0 support
+- Drop PHP 7.2 support
+
 ## 1.3.0 - 2020-09-14
 
 -   Add Laravel 8 support
