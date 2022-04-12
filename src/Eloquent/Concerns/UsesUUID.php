@@ -43,9 +43,8 @@ trait UsesUUID
     }
 
     /**
-     * @param Builder $query
-     * @param string|string[]|UuidInterface|UuidInterface[] $uuid
-     *
+     * @param  Builder  $query
+     * @param  string|string[]|UuidInterface|UuidInterface[]  $uuid
      * @return Builder
      */
     public function scopeWhereUuid(Builder $query, $uuid): Builder
@@ -60,9 +59,8 @@ trait UsesUUID
     }
 
     /**
-     * @param Builder $query
-     * @param string|string[]|UuidInterface|UuidInterface[] $uuid
-     *
+     * @param  Builder  $query
+     * @param  string|string[]|UuidInterface|UuidInterface[]  $uuid
      * @return Builder
      */
     public function scopeByUuid(Builder $query, $uuid): Builder
@@ -71,8 +69,7 @@ trait UsesUUID
     }
 
     /**
-     * @param string|UuidInterface $uuid
-     *
+     * @param  string|UuidInterface  $uuid
      * @return Model
      */
     public function setUuid($uuid): Model
@@ -90,8 +87,7 @@ trait UsesUUID
     }
 
     /**
-     * @param string|UuidInterface $uuid
-     *
+     * @param  string|UuidInterface  $uuid
      * @return bool
      */
     public function isValidUuid($uuid): bool
