@@ -1,7 +1,8 @@
 {
     "name": "astrotomic/laravel-eloquent-uuid",
-    "type": "library",
     "description": "A simple drop-in solution for UUID support in your Eloquent models.",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "astrotomic",
         "laravel-eloquent-uuid",
@@ -9,8 +10,6 @@
         "eloquent",
         "uuid"
     ],
-    "homepage": "https://astrotomic.info",
-    "license": "MIT",
     "authors": [
         {
             "name": "Tom Witkowski",
@@ -19,6 +18,12 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://astrotomic.info",
+    "support": {
+        "email": "dev@astrotomic.info",
+        "issues": "https://github.com/Astrotomic/laravel-eloquent-uuid/issues",
+        "source": "https://github.com/Astrotomic/laravel-eloquent-uuid"
+    },
     "require": {
         "php": "^7.4 || ^8.0",
         "illuminate/database": "^8.0 || ^9.0",
@@ -28,9 +33,6 @@
         "mockery/mockery": "^1.4",
         "orchestra/testbench": "^6.0 || ^7.0",
         "phpunit/phpunit": "^9.3"
-    },
-    "config": {
-        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
@@ -42,13 +44,11 @@
             "Astrotomic\\LaravelEloquentUuid\\Tests\\": "tests"
         }
     },
+    "config": {
+        "sort-packages": true
+    },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-    },
-    "support": {
-        "email": "dev@astrotomic.info",
-        "issues": "https://github.com/Astrotomic/laravel-eloquent-uuid/issues",
-        "source": "https://github.com/Astrotomic/laravel-eloquent-uuid"
     }
 }
